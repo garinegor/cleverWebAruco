@@ -12,7 +12,8 @@ PATH_TO_FOLDER = "/Users/garinegorgmail.com/desktop/map"
 
 
 def home(request):
-    return render(request, "aruco/index.html")
+    files = [i for i in os.listdir(PATH_TO_FOLDER) if i.split(".")[1] == "txt"]
+    return render(request, "aruco/index.html", {"files": files})
 
 
 @csrf_exempt
@@ -50,3 +51,24 @@ def validate_filename(request):
         message = "Error."
 
     return HttpResponse(message)
+
+
+@csrf_exempt
+def load_file(request):
+    if request.method == 'POST':
+        filename = request.POST["filename"]
+        try:
+            with open(PATH_TO_FOLDER + "/" + filename) as f:
+                # lines = f.readlines()
+                # return HttpResponse("\n".join(lines))
+                return HttpResponse(f.read())
+        except:
+            return HttpResponseBadRequest()
+
+    else:
+        return HttpResponse("Error")
+
+
+def show_files(request):
+    files = [i for i in os.listdir(PATH_TO_FOLDER) if i.split(".")[1] == "txt"]
+    return render(request, "aruco/files.html", {"files": files})

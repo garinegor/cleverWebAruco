@@ -17,5 +17,5 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('aruco.urls'))
+    path('aruco/', include('aruco.urls'))
 ]

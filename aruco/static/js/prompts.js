@@ -13,7 +13,7 @@ Ply.factory('getFilename', function (options, data, resolve) {
 
   options.onaction = function (ui) {
     console.log(ui);
-    return !ui.state || $.post('/validate_filename', {
+    return !ui.state || $.post('/aruco/validate_filename', {
         filename: ui.data.filename
       }).fail(function () {
         // $(ui.widget.el.firstChild)[0].innerText = "Файл с таким именем уже существует!";

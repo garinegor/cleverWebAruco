@@ -36,6 +36,8 @@ var selectionHeight = document.getElementById("multiMarkerHeight");
 var selectionX = document.getElementById("multiInputX");
 var selectionY = document.getElementById("multiInputY");
 
+var fileContent;
+
 // create canvas and field
 var c = document.getElementById('c');
 
@@ -734,7 +736,7 @@ function generateMap() {
     var fileName = "map";
     Ply.dialog('getFilename').done(function(ui) {
       fileName = ui.data.filename;
-      $.post("/save_map", {
+      $.post("/aruco/save_map", {
         filename: fileName,
         map: JSON.stringify(strings)
       })
@@ -749,5 +751,37 @@ function generateMap() {
   else {
     Ply.dialog("alert", "На поле нет маркеров!");
   }
+}
+
+// load map file
+function loadFile(fileName) {
+  // var map;
+
+  // hide modal
+  $('#filePicker').modal('hide');
+
+  // get file content
+  $.post("/aruco/load_file", {
+        filename: fileName
+      })
+      .done(function(content){
+        fileContent = content;
+        console.log(fileContent);
+      })
+      .fail(function() {
+        Ply.dialog("alert", "Возникли проблемы с загрузкой файла!");
+        return;
+      });
+
+  // parse markers
+  var markers = fileContent.split("\n").slice(0,-1);
+  console.log(markers);
+  markers.forEach(function (target) {
+    var markerParameters = target.split(" ");
+    console.log(markerParameters);
+  })
+
+  // add markers to a canvas
+
 }
 
