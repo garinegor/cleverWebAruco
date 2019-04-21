@@ -72,10 +72,10 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<button alt="Сделать нулевой" type="button" id="zerocheck" class="btn btn-primary star-button"><img id="starIcon" class="star-icon" alt="" src="{% static "css/svg/graystar.png" %}" /><div id="starText" style="width: 100%;">Сделать метку главной</div></button>
-						</div>
-						<div class="form-group">
-							<button alt="Удалить выбранные объекты" type="button" id="delete" onclick="removeSelected()" class="btn btn-primary btn-danger delete-button"><div id="starText" style="width: 100%;">Удалить</div></button>
+							<div class="btn-group" role="group" aria-label="Basic example">
+								<button alt="Сделать нулевой" type="button" id="zerocheck" class="btn btn-primary star-button"><img id="starIcon" class="star-icon" alt="" src="{% static "css/svg/graystar.png" %}" /><div id="starText" style="width: 100%;">Сделать метку главной</div></button>
+								<button alt="Удалить выбранные объекты" type="button" id="delete" onclick="removeSelected()" class="btn btn-primary btn-danger delete-button"><div id="starText" style="width: 100%;">Удалить</div></button>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -145,7 +145,8 @@
 		</div>
 		</button>
 		<img onclick="expand()" id="aruco-plus" class="aruco-plus" src="{% static "css/svg/plus.svg" %}" alt="" />
-		<img id="aruco-send" onclick="generateMap()" class="aruco-send" src="{% static "css/svg/galochka.svg" %}" alt="" />
+		<div id="aruco-send-content" onclick="generateMap()" class="aruco-send"></div>
+		<img id="aruco-send" onclick="showArucoSendContent()" class="aruco-send" src="{% static "css/svg/galochka.svg" %}" alt="">
 		<div id="blocker" class="blocker"></div>
 		<div id="hint" class="hint">
 			<div id="hint-content" class="hint-content"></div>

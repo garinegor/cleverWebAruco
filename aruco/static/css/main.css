@@ -1,3 +1,5 @@
+{% load static %}
+
 html {
   margin: 0px;
   padding: 0px;
@@ -186,12 +188,14 @@ body {
 
 .aruco-send {
   cursor: pointer;
-  transition: .5s;
+  transition: .25s;
   width: 60px;
   height: 60px;
   right: 50px;
   position: absolute;
   bottom: 50px;
+  border-radius: 30px;
+  background-color: {% static "css/svg/galochka.svg" %};
 }
 
 .aruco-info {

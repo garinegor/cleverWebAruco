@@ -60,3 +60,23 @@ function display_info_group() {
 function hide_info_group() {
   document.getElementById("multi-aruco-info").style.top = "-800px";
 }
+
+function showArucoSendContent() {
+    var content = document.getElementById("aruco-send-content");
+    content.style.backgroundColor = "#2D6A70";
+    content.style.right = "150px";
+    document.getElementById("aruco-send").onclick = hideArucoSendContent;
+    setTimeout(function() {
+        var content = document.getElementById("aruco-send-content");
+        content.style.width = "180px";
+    }, 250);
+}
+
+function hideArucoSendContent() {
+    var content = document.getElementById("aruco-send-content");
+    content.style.backgroundColor = "#2D6A70";
+    content.style.right = "50px";
+    content.style.width = "60px";
+    document.getElementById("aruco-send").onclick = showArucoSendContent;
+}
+
