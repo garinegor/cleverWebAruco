@@ -20,6 +20,8 @@ var magnetPreference = {
   "rotate": true,
   "resize": false
 };
+var is_scaling = false;
+var scaling_points = {};
 
 // one marker properties panel variables
 var idField = document.getElementById("inputID");
@@ -494,6 +496,10 @@ canvas.on("mouse:wheel", function(opt) {
   opt.e.stopPropagation();
 });
 
+canvas.on("mouse:up", function(opt) {
+  is_scaling = false;
+});
+
 // selection handlers
 canvas.on("selection:created", function(options) {
   console.log(options.target);
@@ -561,39 +567,41 @@ canvas.on('object:rotating', function(op) {
 canvas.on('object:scaling', function(options) {
   if ("id" in options.target) {
     if (magnetPreference["resize"] && gridCreated) {
+       if (!is_scaling) {
+        var diagonall = Math.sqrt(Math.pow(options.target.width * options.target.scaleX, 2) + Math.pow(options.target.height * options.target.scaleY, 2));
+        scaling_points = {
+            x: options.target.left + (diagonall * Math.cos(Math.PI / 180 * (options.target.angle) + Math.asin(options.target.height * options.target.scaleY / diagonall))) / 2,
+            y: options.target.top + (diagonall * Math.sin(Math.PI / 180 * (options.target.angle) + Math.acos(options.target.width * options.target.scaleX / diagonall))) / 2
+        };
+        is_scaling = true;
+       }
       forceMagnetEnabled = false;
+
       if (options.target.width * options.target.scaleX > getPxValue(gridWidth) - resizeMarkerThreshold && options.target.width * options.target.scaleX < getPxValue(gridWidth) + resizeMarkerThreshold) {
-        var diagonal = Math.sqrt(Math.pow(options.target.width * options.target.scaleX, 2) + Math.pow(options.target.height * options.target.scaleY, 2));
-        central_point_before = { //center
-            x: options.target.left + (diagonal * Math.cos(Math.PI / 180 * (options.target.angle) + Math.asin(options.target.height * ooptionsp.target.scaleY / diagonal))) / 2,
-            y: options.target.top + (diagonal * Math.sin(Math.PI / 180 * (options.target.angle) + Math.acos(options.target.width * options.target.scaleX / diagonal))) / 2
-        }
         options.target.scaleX = getPxValue(gridWidth) / options.target.width;
         options.target.scaleY = options.target.scaleX;
-        diagonal = Math.sqrt(Math.pow(options.target.width * options.target.scaleX, 2) + Math.pow(options.target.height * options.target.scaleY, 2));
-        central_point_after = { //center
-            x: options.target.left + (diagonal * Math.cos(Math.PI / 180 * (options.target.angle) + Math.asin(options.target.height * ooptionsp.target.scaleY / diagonal))) / 2,
-            y: options.target.top + (diagonal * Math.sin(Math.PI / 180 * (options.target.angle) + Math.acos(options.target.width * options.target.scaleX / diagonal))) / 2
-        }
-        options.target.left += central_point_before.x - central_point_after.x;
-        options.target.top += central_point_before.y - central_point_after.y;
-        console.log(central_point_before === central_point_after);
       }
+
+      var diagonal = Math.sqrt(Math.pow(options.target.width * options.target.scaleX, 2) + Math.pow(options.target.height * options.target.scaleY, 2));
+      var now_points = {
+        x: options.target.left + (diagonal * Math.cos(Math.PI / 180 * (options.target.angle) + Math.asin(options.target.height * options.target.scaleY / diagonal))) / 2,
+        y: options.target.top + (diagonal * Math.sin(Math.PI / 180 * (options.target.angle) + Math.acos(options.target.width * options.target.scaleX / diagonal))) / 2
+      };
+      options.target.left -= now_points.x - scaling_points.x;
+      options.target.top -= now_points.y - scaling_points.y;
     }
+
     // recalculate aCoords and get bottom left coordinates
     options.target.setCoords(); 
     var markerCoords = getBlCoordinates(options.target);
-
     shiftX.value = getMmValue(markerCoords.x);
     shiftY.value = getMmValue(markerCoords.y);
     markerSide.value = getMmValue(getHeight(options.target));
     options.target.side = markerSide.value;
-
   } else {
     // recalculate aCoords
     options.target.setCoords(); 
     var markerCoords = getBlCoordinates(options.target);
-
     selectionX.value = getMmValue(markerCoords.x);
     selectionY.value = getMmValue(markerCoords.y);
     selectionHeight.value = getMmValue(getHeight(options.target));
