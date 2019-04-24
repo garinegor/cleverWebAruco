@@ -439,9 +439,10 @@ function magnetize(op) {
 function magnetSettings(e) {
   magnetPreference[e] = !magnetPreference[e];
   if (magnetPreference[e]) {
-    document.getElementById("magnetTogglerImg" + e).src = "css/svg/tick.png";
+    document.getElementById("magnetTogglerImg" + e).src = "/static/css/svg/tick.png";
+
   } else {
-    document.getElementById("magnetTogglerImg" + e).src = "css/svg/cross.svg";
+    document.getElementById("magnetTogglerImg" + e).src = "/static/css/svg/cross.svg";
   }
 }
 
@@ -562,8 +563,21 @@ canvas.on('object:scaling', function(options) {
     if (magnetPreference["resize"] && gridCreated) {
       forceMagnetEnabled = false;
       if (options.target.width * options.target.scaleX > getPxValue(gridWidth) - resizeMarkerThreshold && options.target.width * options.target.scaleX < getPxValue(gridWidth) + resizeMarkerThreshold) {
+        var diagonal = Math.sqrt(Math.pow(options.target.width * options.target.scaleX, 2) + Math.pow(options.target.height * options.target.scaleY, 2));
+        central_point_before = { //center
+            x: options.target.left + (diagonal * Math.cos(Math.PI / 180 * (options.target.angle) + Math.asin(options.target.height * ooptionsp.target.scaleY / diagonal))) / 2,
+            y: options.target.top + (diagonal * Math.sin(Math.PI / 180 * (options.target.angle) + Math.acos(options.target.width * options.target.scaleX / diagonal))) / 2
+        }
         options.target.scaleX = getPxValue(gridWidth) / options.target.width;
         options.target.scaleY = options.target.scaleX;
+        diagonal = Math.sqrt(Math.pow(options.target.width * options.target.scaleX, 2) + Math.pow(options.target.height * options.target.scaleY, 2));
+        central_point_after = { //center
+            x: options.target.left + (diagonal * Math.cos(Math.PI / 180 * (options.target.angle) + Math.asin(options.target.height * ooptionsp.target.scaleY / diagonal))) / 2,
+            y: options.target.top + (diagonal * Math.sin(Math.PI / 180 * (options.target.angle) + Math.acos(options.target.width * options.target.scaleX / diagonal))) / 2
+        }
+        options.target.left += central_point_before.x - central_point_after.x;
+        options.target.top += central_point_before.y - central_point_after.y;
+        console.log(central_point_before === central_point_after);
       }
     }
     // recalculate aCoords and get bottom left coordinates
@@ -645,20 +659,20 @@ function markerSelected(options) {
     }
     marker.main = t;
     if (marker.main) {
-      document.getElementById("starIcon").src = "css/svg/gold-star.png";
+      document.getElementById("starIcon").src = "/static/css/svg/gold-star.png";
       document.getElementById("starText").innerHTML = "Главная метка";
     } else {
-      document.getElementById("starIcon").src = "css/svg/graystar.png";
+      document.getElementById("starIcon").src = "/static/css/svg/graystar.png";
       document.getElementById("starText").innerHTML = "Сделать метку главной";
     }
   }
 
 
   if (marker.main) {
-    document.getElementById("starIcon").src = "css/svg/gold-star.png";
+    document.getElementById("starIcon").src = "/static/css/svg/gold-star.png";
     document.getElementById("starText").innerHTML = "Главная метка";
   } else {
-    document.getElementById("starIcon").src = "css/svg/graystar.png";
+    document.getElementById("starIcon").src = "/static/css/svg/graystar.png";
     document.getElementById("starText").innerHTML = "Сделать метку главной";
   }
   display_info();
