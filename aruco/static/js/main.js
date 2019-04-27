@@ -184,7 +184,6 @@ function createMultipleMarkers() {
 }
 
 function createGrid() {
-  hide_context_menu();
   Ply.dialog("prompt", {
     title: "Введите размеры секи",
     form: {
@@ -347,7 +346,6 @@ function generateGridObject(step) {
 
 // toggle grid
 function toggleGrid() {
-  hide_context_menu();
   if (gridCreated) {
     for (var i = 0; i < canvas._objects.length; i++) {
       if (canvas._objects[i].name == "grid") {
@@ -440,12 +438,18 @@ function magnetize(op) {
 
 function magnetSettings(e) {
   magnetPreference[e] = !magnetPreference[e];
-  if (magnetPreference[e]) {
-    document.getElementById("magnetTogglerImg" + e).src = "/static/css/svg/tick.png";
-
-  } else {
-    document.getElementById("magnetTogglerImg" + e).src = "/static/css/svg/cross.svg";
+  var u = 0;
+  for (var i = 0; i < customContextMenu[1].subMenu.length; i++) {
+    if (e === customContextMenu[1].subMenu[i].id) {
+        u = i;
+    }
   }
+  if (magnetPreference[e]) {
+    customContextMenu[1].subMenu[u].img = "/static/css/svg/tick.png";
+  } else {
+    customContextMenu[1].subMenu[u].img = "/static/css/svg/cross.svg";
+  }
+  $('.aruco-field-container').contextMenu(customContextMenu,{triggerOn:'contextmenu'});
 }
 
 // handlers

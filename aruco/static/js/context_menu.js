@@ -1,69 +1,83 @@
-document.getElementById("magnetTogglerContainer").onmouseover = function() {
-  document.getElementById("magnetTogglerContainer").style.backgroundColor = "#02a676";
-  document.getElementById("magnetToggler").style.backgroundColor = "#02a676";
-  document.getElementById("magnetTogglerContainer").style.cursor = "pointer";
-};
+var customContextMenu = [{
+  	    name: 'Изменить размеры поля',
+  	    title: 'Изменить размеры поля',
+  	    fun: function () {
+  	        alert('Ща все будет')
+  	    }
+  	}, {
+  	    name: 'Настроить привязку',
+  	    title: 'Настроить привязку',
+  	    subMenu: [{
+            name: 'Центр',
+            title: 'Центр',
+            img: "/static/css/svg/tick.png",
+            fun: function () {
+                magnetSettings('center');
+            },
+            id: "center"
+        }, {
+            name: 'Правый верхний угол',
+            title: 'Правый верхний угол',
+            img: "/static/css/svg/cross.svg",
+            fun: function () {
+                magnetSettings('right-top');
+            },
+            id: "right-top"
+       }, {
+            name: 'Правый нижний угол',
+            title: 'Правый нижний угол',
+            img: "/static/css/svg/cross.svg",
+            fun: function () {
+                magnetSettings('right-bottom');
+            },
+            id: "right-bottom"
+        }, {
+            name: 'Левый верхний угол',
+            title: 'Левый верхний угол',
+            img: "/static/css/svg/cross.svg",
+            fun: function () {
+                magnetSettings('left-top');
+            },
+            id: "left-top"
+        }, {
+            name: 'Левый нижний угол',
+            title: 'Левый нижний угол',
+            img: "/static/css/svg/cross.svg",
+            fun: function () {
+                magnetSettings('left-bottom');
+            },
+             id: "left-bottom"
+       }, {
+            name: 'Привязка по углу',
+            title: 'Привязка по углу',
+            img: "/static/css/svg/tick.png",
+            fun: function () {
+                magnetSettings('rotate');
+            },
+            id: "rotate"
+        }, {
+            name: 'Привязка по масштабированию',
+            title: 'Привязка по масштабированию',
+            img: "/static/css/svg/cross.svg",
+            fun: function () {
+                magnetSettings('resize');
+            },
+            id: "resize"
+        }]
+  	}, {
+  	    name: 'Показать сетку',
+  	    title: 'Показать сетку',
+  	    fun: toggleGrid
+  	}, {
+  	    name: 'Настроить сетку',
+  	    title: 'Настроить сетку',
+  	    fun: createGrid
+  	}, {
+  	    name: 'Очистить',
+  	    title: 'Очистить',
+  	    fun: function () {
+  	        alert('Ещё не сделал')
+  	    }
+  	}];
 
-document.getElementById("magnetTogglerContainer").onmouseleave = function() {
-  document.getElementById("magnetTogglerContainer").style.backgroundColor = "#EEEEEE";
-  document.getElementById("magnetToggler").style.backgroundColor = "#EEEEEE";
-  document.getElementById("magnetTogglerContainer").style.cursor = "default";
-};
-
-window.addEventListener('click', function(e) {
-  if (document.getElementById('context-menu').contains(e.target) || document.getElementById('magnet-context-menu').contains(e.target)) {
-    // Clicked in right click box
-  } else {
-    hide_context_menu();
-  }
-});
-
-if (document.addEventListener) {
-  document.getElementById("aruco-field-container").addEventListener('contextmenu', function(e) {
-    show_context_menu(e);
-    e.preventDefault();
-  }, false);
-}
-
-function toggleMaget() {
-  document.getElementById("magnet-context-menu").style.top = (rightClick.clientY + 30).toString() + "px";
-  document.getElementById("magnet-context-menu").style.left = (rightClick.clientX + 220).toString() + "px";
-  document.getElementById("magnet-context-menu").style.width = "auto";
-  document.getElementById("magnet-context-menu").style.height = "auto";
-  document.getElementById("magnet-context-menu").addEventListener('mouseleave', function() {
-    hide_magnet_context_menu();
-  });
-}
-
-function context_menu(x, y) {
-  menu = document.getElementById("context-menu");
-  menu.style.top = y;
-  menu.style.left = x;
-  menu.style.width = "230px";
-  menu.style.height = "auto";
-}
-
-function hide_context_menu() {
-  //e.clientX, e.clientY
-  menu = document.getElementById("context-menu");
-  menu.style.top = "100%";
-  menu.style.left = "100%";
-  menu.style.width = "0px";
-  menu.style.height = "0px";
-}
-
-function show_context_menu(e) {
-  menu = document.getElementById("context-menu");
-  rightClick = e;
-  context_menu((e.clientX - 10).toString() + "px", (e.clientY - 10).toString() + "px");
-  /*menu.addEventListener('mouseleave', function() {
-    hide_context_menu();
-  });*/
-}
-
-function hide_magnet_context_menu() {
-  document.getElementById("magnet-context-menu").style.top = "100%";
-  document.getElementById("magnet-context-menu").style.left = "100%";
-  document.getElementById("magnet-context-menu").style.width = "0";
-  document.getElementById("magnet-context-menu").style.height = "0";
-}
+$('.aruco-field-container').contextMenu(customContextMenu,{triggerOn:'contextmenu'});

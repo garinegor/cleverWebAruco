@@ -69,7 +69,6 @@ var steps = [
     currstep++;
   },
   function() {
-    hide_context_menu();
     document.getElementById("hint-content").innerHTML = "На этом все, теперь попробуйте создать поле!";
     document.getElementById("magnetToggler").onclick = toggleMaget;
     document.getElementById("gridToggler").onclick = toggleGrid;
