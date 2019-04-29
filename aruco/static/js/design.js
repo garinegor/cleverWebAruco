@@ -44,21 +44,21 @@ function not_expand() {
 }
 
 function display_info() {
-  document.getElementById("aruco-info").style.top = "20px";
+  document.getElementById("aruco-info").style.left = "calc(100% - 520px)";
   hide_info_group();
 }
 
 function hide_info() {
-  document.getElementById("aruco-info").style.top = "-800px";
+  document.getElementById("aruco-info").style.left = "100%";
 }
 
 function display_info_group() {
-  document.getElementById("multi-aruco-info").style.top = "20px";
+  document.getElementById("multi-aruco-info").style.left = "calc(100% - 520px)";
   hide_info();
 }
 
 function hide_info_group() {
-  document.getElementById("multi-aruco-info").style.top = "-800px";
+  document.getElementById("multi-aruco-info").style.left = "100%";
 }
 
 function showArucoSendContent() {

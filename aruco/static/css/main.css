@@ -100,12 +100,13 @@ body {
   transition: 1s;
   padding: 0;
   position: absolute;
-  right: 20px;
-  top: -800px;
+  left: 100%;
+  top: 20px;
   border-radius: 10px;
   height: auto;
   padding-right: 20px;
   padding-left: 20px;
+  width: 500px;
   background-color: #DDDDDD;
 }
 
@@ -350,11 +351,4 @@ body {
   position: absolute;
   left: 145px;
   top: 8px;
-}
-
-trash-img {
-    color: white;
-    fill: white;
-    width: auto;
-    height: 50px;
 }
