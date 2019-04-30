@@ -80,3 +80,17 @@ function hideArucoSendContent() {
     document.getElementById("aruco-send").onclick = showArucoSendContent;
 }
 
+function showArucoList() {
+    document.getElementById("toggler-element").style.right = "60px";
+    document.getElementById("toggler-element").style.backgroundColor = "#23E835";
+    document.getElementById("toggler").onclick = hideArucoList;
+    document.getElementById("arucos-info").style.left = "calc(100% - 520px)";
+
+}
+
+function hideArucoList() {
+    document.getElementById("toggler-element").style.right = "0px";
+    document.getElementById("toggler-element").style.backgroundColor = "#E84E2C";
+    document.getElementById("toggler").onclick = showArucoList;
+    document.getElementById("arucos-info").style.left = "100%";
+}
