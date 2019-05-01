@@ -157,7 +157,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 200px;
-    flex-shrink: space-between;
+    justify-content: space-between;
     height: 50px;
     transition: .1s;
     align-items: center;
