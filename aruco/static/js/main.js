@@ -205,7 +205,7 @@ function addMarkerObject(markerId, mmMarkerSide, left, top) {
   not_expand();
 
   var marker;
-
+  addMarkerToList(markerId);
   marker = generateArucoMarker(4, 4, "4x4_1000", markerId);
 
   var scale = calculateScaleFactor(marker, mmMarkerSide);
@@ -596,7 +596,7 @@ canvas.on('object:scaling', function(options) {
     }
 
     // recalculate aCoords and get bottom left coordinates
-    options.target.setCoords(); 
+    options.target.setCoords();
     var markerCoords = getBlCoordinates(options.target);
     shiftX.value = getMmValue(markerCoords.x);
     shiftY.value = getMmValue(markerCoords.y);
@@ -604,7 +604,7 @@ canvas.on('object:scaling', function(options) {
     options.target.side = markerSide.value;
   } else {
     // recalculate aCoords
-    options.target.setCoords(); 
+    options.target.setCoords();
     var markerCoords = getBlCoordinates(options.target);
     selectionX.value = getMmValue(markerCoords.x);
     selectionY.value = getMmValue(markerCoords.y);
@@ -811,3 +811,55 @@ function loadFile(fileName) {
 
 }
 
+function generateMarkerSvg(width, height, id) {
+    var bytes = dict["4x4_1000"][id];
+	var bits = [];
+	var bitsCount = width *  height;
+
+	// Parse marker's bytes
+	for (var byte of bytes) {
+		var start = bitsCount - bits.length;
+		for (var i = Math.min(7, start - 1); i >= 0; i--) {
+			bits.push((byte >> i) & 1);
+		}
+	}
+
+	var svg = $('<svg/>').attr({
+		viewBox: '0 0 ' + (width + 2) + ' ' + (height + 2),
+		xmlns: 'http://www.w3.org/2000/svg',
+		'shape-rendering': 'crispEdges' // disable anti-aliasing to avoid little gaps between rects
+	});
+
+	// Background rect
+	$('<rect/>').attr({
+		x: 0,
+		y: 0,
+		width: width + 2,
+		height: height + 2,
+		fill: 'black'
+	}).appendTo(svg);
+
+	// "Pixels"
+	for (var i = 0; i < height; i++) {
+		for (var j = 0; j < width; j++) {
+			var color = bits[i * height + j] ? 'white' : 'black';
+			var pixel = $('<rect/>').attr({
+				width: 1,
+				height: 1,
+				x: j + 1,
+				y: i + 1,
+				fill: color
+			});
+			pixel.appendTo(svg);
+		}
+	}
+
+	return svg;
+}
+
+function addMarkerToList(id) {
+    var svg = generateMarkerSvg(4, 4, id);
+    document.getElementById("marker-list").innerHTML += '<li class="nav-item list-content"><div style="margin-right: 20px; width: 20px; height: auto;">' + svg[0].outerHTML + "</div>" + id + "</li>";
+    var str = generateMarkerSvg(4, 4, id).html;
+    return str;
+}
