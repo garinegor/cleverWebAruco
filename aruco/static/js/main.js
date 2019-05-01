@@ -116,6 +116,11 @@ function setBlCoordinates(object, x, y) {
   canvas.requestRenderAll();
 }
 
+function setCenterCoordinates(object, x, y) {
+  object.setPositionByOrigin({x: x, y: getHeight(rect) - y}, "center", "center");
+  canvas.requestRenderAll();
+}
+
 // three creation modes
 function createOneMarker() {
   // create on marker
@@ -717,6 +722,14 @@ function multiMarkerSelected(options) {
   display_info_group();
 }
 
+function clearField() {
+  canvas.getObjects().forEach(function(object) {
+    if ("id" in object) {
+     canvas.remove(object);
+    }
+  });
+}
+
 function removeSelected() {
   canvas.getActiveObjects().forEach(function(object) {
     canvas.remove(object);
@@ -779,36 +792,80 @@ function generateMap() {
   }
 }
 
-// load map file
-function loadFile(fileName) {
-  // var map;
-
-  // hide modal
+// get and load map file
+function openFile(fileName) {
+  // hide modal and clear field
   $('#filePicker').modal('hide');
-
+  clearField();
   // get file content
   $.post("/aruco/load_file", {
         filename: fileName
       })
       .done(function(content){
-        fileContent = content;
-        console.log(fileContent);
+        loadMap(content)
       })
       .fail(function() {
         Ply.dialog("alert", "Возникли проблемы с загрузкой файла!");
-        return;
       });
+}
 
-  // parse markers
-  var markers = fileContent.split("\n").slice(0,-1);
-  console.log(markers);
-  markers.forEach(function (target) {
-    var markerParameters = target.split(" ");
-    console.log(markerParameters);
-  })
+function loadMap(fileContent) {
+  // add markers from file
+  var markerLines = fileContent.split("\n");
+  var markers = [];
+  var mainMarker;
 
-  // add markers to a canvas
+  for (var i = 0; i < markerLines.length - 1; i++) {
+    var marker = markerLines[i].split(" ");
+    if (marker[2] == 0 && marker[3] == 0 && marker[4] == 0) {
+      mainMarker = marker;
+      break;
+    } else {
+      markers.push(marker);
+    }
+  }
 
+  if (mainMarker) {
+    console.log("открываю поле с главной меткой");
+
+    var mainMinX = mainMarker[2] - mainMarker[1]/2;
+    var mainMinY = mainMarker[3] - mainMarker[1]/2;
+    var mainMaxX = mainMinX + mainMarker[1];
+    var mainMaxY = mainMinY + mainMarker[1];
+
+    // find field edges (to show it and recalculate marker coordinates)
+    markers.forEach(function (marker) {
+      mainMinX = marker[2] - marker[1]/2 < mainMinX ? marker[2] - marker[1]/2 : mainMinX;
+      mainMinY = marker[3] - marker[1]/2 < mainMinY ? marker[3] - marker[1]/2 : mainMinY;
+      mainMaxX = mainMinX + marker[1] < mainMaxX ? mainMinX + marker[1] : mainMaxX;
+      mainMaxY = mainMinY + marker[1] < mainMaxY ? mainMinY + marker[1] : mainMaxY;
+    });
+
+    // add main marker to others
+    markers.push(mainMarker);
+
+    // resize field to fit all markers inside
+    resizeField(mainMaxX - mainMinX, mainMaxY - mainMinY);
+
+    // recalculate marker coords
+    console.log(mainMinX);
+    console.log(mainMinY);
+    markers.forEach(function (marker) {
+      marker[2] -= mainMinX;
+      marker[3] -= mainMinY;
+    })
+  }
+
+  markers.forEach(function (marker) {
+      //create marker and set z coordinate
+      var markerObject = addMarkerObject(marker[0], marker[1] * 1000, 0, 0);
+      markerObject.z = marker[4];
+      //set center coords and angle
+      markerObject.rotate(marker[5] * 180 / Math.PI);
+      setCenterCoordinates(markerObject, getPxValue(marker[2] * 1000), getPxValue(marker[3] * 1000));
+      // recalculate new marker and make it active
+      markerObject.setCoords();
+  });
 }
 
 function generateMarkerSvg(width, height, id) {

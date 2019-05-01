@@ -8,7 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 PATH_TO_LAUNCH = "path_to_launch"
-PATH_TO_FOLDER = "/Users/Motoy/Desktop/map"
+PATH_TO_FOLDER = "/Users/garinegorgmail.com/desktop/map"
 
 
 def home(request):
