@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="922bd3b5-5158-4ea9-8b14-a6af5eeac903" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/aruco/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aruco/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aruco/templates/aruco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/templates/aruco/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aruco/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cleverweb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cleverweb/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,59 +20,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aruco/templates/aruco/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1236">
-              <caret line="157" column="49" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
+            <state relative-caret-position="93">
+              <caret line="176" column="54" lean-forward="true" selection-start-line="176" selection-start-column="54" selection-end-line="176" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aruco/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="28" selection-start-column="28" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cleverweb/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-              <folding>
-                <element signature="e#633#665#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aruco/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aruco/static/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
-              <caret line="161" selection-start-line="161" selection-end-line="161" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aruco/static/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+            <state relative-caret-position="340">
+              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
               </folding>
@@ -82,10 +39,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aruco/static/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="5" column="32890" selection-start-line="5" selection-start-column="32878" selection-end-line="5" selection-end-column="32890" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aruco/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aruco/static/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="308" column="20" selection-start-line="308" selection-start-column="20" selection-end-line="308" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aruco/static/js/design.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+            <state relative-caret-position="493">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -156,18 +143,19 @@
         <option value="$PROJECT_DIR$/aruco/static/js/context_menu.js" />
         <option value="$PROJECT_DIR$/aruco/static/css/contextMenu.css" />
         <option value="$PROJECT_DIR$/aruco/static/js/design.js" />
-        <option value="$PROJECT_DIR$/aruco/static/css/main.css" />
         <option value="$PROJECT_DIR$/aruco/templates/aruco/index.html" />
-        <option value="$PROJECT_DIR$/aruco/views.py" />
         <option value="$PROJECT_DIR$/cleverweb/urls.py" />
         <option value="$PROJECT_DIR$/aruco/static/js/main.js" />
+        <option value="$PROJECT_DIR$/aruco/views.py" />
+        <option value="$PROJECT_DIR$/aruco/static/css/main.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="828" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -187,6 +175,34 @@
               <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
               <item name="aruco" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="aruco" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="aruco" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="aruco" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="svg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="aruco" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -262,18 +278,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50924000" />
+    <option name="totallyTimeSpent" value="51830000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="828" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14377682" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14712153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.1861413" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.34561214" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -438,34 +454,17 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/aruco/static/css/contextMenu.css" />
-    <entry file="file://$PROJECT_DIR$/aruco/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2415">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aruco/static/js/design.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aruco/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aruco/templates/aruco/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1236">
-          <caret line="157" column="49" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
+        <state relative-caret-position="93">
+          <caret line="176" column="54" lean-forward="true" selection-start-line="176" selection-start-column="54" selection-end-line="176" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -488,11 +487,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aruco/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+        <state relative-caret-position="340">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="5" column="32890" selection-start-line="5" selection-start-column="32878" selection-end-line="5" selection-end-column="32890" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="308" column="20" selection-start-line="308" selection-start-column="20" selection-end-line="308" selection-end-column="20" />
         </state>
       </provider>
     </entry>

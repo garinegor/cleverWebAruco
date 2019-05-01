@@ -917,6 +917,4 @@ function generateMarkerSvg(width, height, id) {
 function addMarkerToList(id) {
     var svg = generateMarkerSvg(4, 4, id);
     document.getElementById("marker-list").innerHTML += '<li class="nav-item list-content"><div style="margin-right: 20px; width: 20px; height: auto;">' + svg[0].outerHTML + "</div>" + id + "</li>";
-    var str = generateMarkerSvg(4, 4, id).html;
-    return str;
 }
