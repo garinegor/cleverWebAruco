@@ -916,5 +916,16 @@ function generateMarkerSvg(width, height, id) {
 
 function addMarkerToList(id) {
     var svg = generateMarkerSvg(4, 4, id);
-    document.getElementById("marker-list").innerHTML += '<li class="nav-item list-content"><div style="margin-right: 20px; width: 20px; height: auto;">' + svg[0].outerHTML + "</div>" + id + "</li>";
+    document.getElementById("marker-list").innerHTML += '<li class="nav-item list-content" id="list-item-' + id + '"><div class="list-image-container">'
+        + svg[0].outerHTML + "</div>" + id +
+        "<div><img onclick=\"hide(" + id + ")\" src=\"/static/css/svg/visible.svg\" class=\"aruco-list-image\" alt='' id=\"list-item-image-" + id + "\"><img src=\"/static/css/svg/red-trashcan.svg\" class=\"aruco-list-image\" alt=\"\"/></div></li>";
+}
+
+function hide(id) {
+  //Условие видимости
+  if (true) {
+    document.getElementById("list-item-image-" + id).src = "/static/css/svg/invisible.svg";
+  } else {
+    document.getElementById("list-item-image-" + id).src = "/static/css/svg/visible.svg";
+  }
 }

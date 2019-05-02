@@ -1,4 +1,5 @@
 //ПОтом убрать
+var rightMenuExpanded = false;
 
 function expand() {
     butt = document.getElementById("new-aruco");
@@ -81,14 +82,16 @@ function hideArucoSendContent() {
 }
 
 function showArucoList() {
+    rightMenuExpanded = true;
     document.getElementById("toggler-element").style.right = "60px";
     document.getElementById("toggler-element").style.backgroundColor = "#23E835";
     document.getElementById("toggler").onclick = hideArucoList;
-    document.getElementById("arucos-info").style.left = "calc(100% - 520px)";
+    document.getElementById("arucos-info").style.left = "calc(100% - 370px)";
 
 }
 
 function hideArucoList() {
+    rightMenuExpanded = false;
     document.getElementById("toggler-element").style.right = "0px";
     document.getElementById("toggler-element").style.backgroundColor = "#E84E2C";
     document.getElementById("toggler").onclick = showArucoList;

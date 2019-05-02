@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="922bd3b5-5158-4ea9-8b14-a6af5eeac903" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/aruco/static/css/svg/invisible.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aruco/static/css/svg/red-trashcan.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aruco/static/css/svg/visible.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aruco/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aruco/static/js/design.js" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/static/js/design.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aruco/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aruco/templates/aruco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/templates/aruco/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,36 +22,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aruco/templates/aruco/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="88" column="106" selection-start-line="88" selection-start-column="106" selection-end-line="88" selection-end-column="106" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#button#1;n#div#0;n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-616">
+              <caret line="127" column="99" selection-start-line="127" selection-start-column="99" selection-end-line="127" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aruco/static/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="924" column="55" lean-forward="true" selection-start-line="924" selection-start-column="55" selection-end-line="924" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aruco/static/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1105">
-              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/visible.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/invisible.svg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aruco/static/css/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="629">
               <caret line="5" column="32890" selection-start-line="5" selection-start-column="32878" selection-end-line="5" selection-end-column="32890" />
             </state>
           </provider>
@@ -54,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aruco/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-479">
+            <state relative-caret-position="68">
               <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -66,17 +74,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aruco/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="316" column="23" lean-forward="true" selection-start-line="316" selection-start-column="23" selection-end-line="316" selection-end-column="23" />
+            <state relative-caret-position="492">
+              <caret line="399" column="20" selection-start-line="399" selection-start-column="20" selection-end-line="399" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/red-trashcan.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/trash.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aruco/static/js/design.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="-4">
+              <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -92,9 +110,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>context</find>
-      <find>/</find>
-      <find>css</find>
       <find>hide_c</find>
       <find>hide_cont</find>
       <find>hide_conte</find>
@@ -122,6 +137,9 @@
       <find>removeSele</find>
       <find>btn-primary:</find>
       <find>star</find>
+      <find>prim</find>
+      <find>li</find>
+      <find>toggler</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -146,12 +164,15 @@
         <option value="$PROJECT_DIR$/aruco/static/js/tutorial.js" />
         <option value="$PROJECT_DIR$/aruco/static/js/context_menu.js" />
         <option value="$PROJECT_DIR$/aruco/static/css/contextMenu.css" />
-        <option value="$PROJECT_DIR$/aruco/static/js/design.js" />
         <option value="$PROJECT_DIR$/cleverweb/urls.py" />
-        <option value="$PROJECT_DIR$/aruco/static/js/main.js" />
         <option value="$PROJECT_DIR$/aruco/views.py" />
-        <option value="$PROJECT_DIR$/aruco/static/css/main.css" />
         <option value="$PROJECT_DIR$/aruco/templates/aruco/index.html" />
+        <option value="$PROJECT_DIR$/aruco/static/js/design.js" />
+        <option value="$PROJECT_DIR$/aruco/static/css/svg/visible.svg" />
+        <option value="$PROJECT_DIR$/aruco/static/css/svg/invisible.svg" />
+        <option value="$PROJECT_DIR$/aruco/static/css/svg/red-trashcan.svg" />
+        <option value="$PROJECT_DIR$/aruco/static/css/main.css" />
+        <option value="$PROJECT_DIR$/aruco/static/js/main.js" />
       </list>
     </option>
   </component>
@@ -200,18 +221,6 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
               <item name="svg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="aruco" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="cleverweb" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -278,22 +287,24 @@
       <workItem from="1556658761582" duration="1981000" />
       <workItem from="1556705763362" duration="2933000" />
       <workItem from="1556718827610" duration="1676000" />
+      <workItem from="1556751262660" duration="95000" />
+      <workItem from="1556804846891" duration="4503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52374000" />
+    <option name="totallyTimeSpent" value="57831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14712153" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15031983" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.34561214" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.1603467" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -431,7 +442,6 @@
     <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/cross.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/trash.svg" />
     <entry file="file://$PROJECT_DIR$/aruco/static/js/prompts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -458,13 +468,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/aruco/static/css/contextMenu.css" />
-    <entry file="file://$PROJECT_DIR$/aruco/static/js/design.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aruco/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -484,21 +487,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aruco/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="629">
           <caret line="5" column="32890" selection-start-line="5" selection-start-column="32878" selection-end-line="5" selection-end-column="32890" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aruco/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="316" column="23" lean-forward="true" selection-start-line="316" selection-start-column="23" selection-end-line="316" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aruco/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-479">
+        <state relative-caret-position="68">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -506,25 +502,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aruco/static/js/main.js">
+    <entry file="file://$PROJECT_DIR$/aruco/static/js/design.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1105">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-4">
+          <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/visible.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/invisible.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/aruco/templates/aruco/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="88" column="106" selection-start-line="88" selection-start-column="106" selection-end-line="88" selection-end-column="106" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#button#1;n#div#0;n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-616">
+          <caret line="127" column="99" selection-start-line="127" selection-start-column="99" selection-end-line="127" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/trash.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/static/css/svg/red-trashcan.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="399" column="20" selection-start-line="399" selection-start-column="20" selection-end-line="399" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="924" column="55" lean-forward="true" selection-start-line="924" selection-start-column="55" selection-end-line="924" selection-end-column="55" />
         </state>
       </provider>
     </entry>

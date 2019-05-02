@@ -360,10 +360,12 @@ body {
 
 .list-content {
     background-color: white;
+    margin-bottom: 1px;
     width: 100%;
     display: flex;
     padding: 10px;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .heading {
@@ -389,4 +391,17 @@ body {
     border-radius: 20px;
     right: 0px;
     transition: 1s;
+}
+
+.aruco-list-image {
+    margin-right: 20px;
+    width: auto;
+    height: 20px;
+    cursor: pointer;
+}
+
+.list-image-container {
+    margin-right: 15px;
+    width: 20px;
+    height: auto;
 }
