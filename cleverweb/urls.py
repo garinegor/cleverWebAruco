@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('aruco.urls')),
-    path('aruco/', include('aruco.urls'))
+    path('aruco/', include('aruco.urls')),
+    path('files/', include('file_explorer.urls'))
 ]

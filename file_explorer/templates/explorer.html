@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static "js/fmain.js" %}"></script>
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/fmain.css" %}">
+    <title>File Explorer</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a href=".." class="navbar-brand">Clever Web</a>
+</nav>
+<div class="wrapper">
+    <nav id="sidebar">
 
+    </nav>
+
+    <div id="content">
+
+    </div>
+</div>
 </body>
 </html>

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'aruco',
+    'file_explorer',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
