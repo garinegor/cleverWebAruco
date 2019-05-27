@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from os import listdir
+import unicodedata
 from os.path import isfile, join
 
 home_path = "C:\\Users\\Motoy\\Desktop"
