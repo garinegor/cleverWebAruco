@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="922bd3b5-5158-4ea9-8b14-a6af5eeac903" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/file_explorer/static/images/angle-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file_explorer/static/images/folder.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file_explorer/static/images/hz.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file_explorer/static/images/image.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file_explorer/static/images/up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file_explorer/templates/imageViewer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aruco/static/css/fmain.css" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/static/css/fmain.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aruco/static/js/fmain.js" beforeDir="false" afterPath="$PROJECT_DIR$/aruco/static/js/fmain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_explorer/static/images/angle-right.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/file_explorer/templates/explorer.html" beforeDir="false" afterPath="$PROJECT_DIR$/file_explorer/templates/explorer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_explorer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/file_explorer/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file_explorer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/file_explorer/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,55 +29,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file_explorer/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/aruco/static/css/fmain.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="68">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file_explorer/templates/explorer.html">
+        <entry file="file://$PROJECT_DIR$/aruco/static/css/fmain.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+            <state relative-caret-position="374">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aruco/static/js/fmain.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file_explorer/templates/explorer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cleverweb/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="122" selection-start-line="122" selection-end-line="122" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/file_explorer/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+            <state relative-caret-position="544">
+              <caret line="58" column="71" lean-forward="true" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#953#1634#0" />
+                <element signature="e#863#1054#0" />
+                <element signature="e#1081#1268#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file_explorer/templates/imageViewer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,7 +107,6 @@
       <find>hide</find>
       <find>addGridObject</find>
       <find>generateGridObject</find>
-      <find>tra</find>
       <find>aruco-co</find>
       <find>aruco-in</find>
       <find>btn</find>
@@ -119,6 +131,7 @@
       <find>aruco</find>
       <find>stat</find>
       <find>STA</find>
+      <find>tra</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -154,17 +167,22 @@
         <option value="$PROJECT_DIR$/file_explorer/static/css/main.css" />
         <option value="$PROJECT_DIR$/file_explorer/static/js/main.js" />
         <option value="$PROJECT_DIR$/cleverweb/settings.py" />
-        <option value="$PROJECT_DIR$/file_explorer/urls.py" />
-        <option value="$PROJECT_DIR$/file_explorer/templates/explorer.html" />
-        <option value="$PROJECT_DIR$/file_explorer/views.py" />
         <option value="$PROJECT_DIR$/aruco/static/js/fmain.js" />
+        <option value="$PROJECT_DIR$/file_explorer/static/images/folder.svg" />
+        <option value="$PROJECT_DIR$/file_explorer/static/images/hz.svg" />
+        <option value="$PROJECT_DIR$/file_explorer/templates/explorer.html" />
         <option value="$PROJECT_DIR$/aruco/static/css/fmain.css" />
+        <option value="$PROJECT_DIR$/file_explorer/urls.py" />
+        <option value="$PROJECT_DIR$/file_explorer/static/images/up.svg" />
+        <option value="$PROJECT_DIR$/file_explorer/static/images/image.svg" />
+        <option value="$PROJECT_DIR$/file_explorer/templates/imageViewer.html" />
+        <option value="$PROJECT_DIR$/file_explorer/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="617" />
-    <option name="width" value="1310" />
+    <option name="x" value="666" />
+    <option name="width" value="1261" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -173,7 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,10 +209,31 @@
               <item name="file_explorer" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="file_explorer" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="file_explorer" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cleverWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cleverWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="file_explorer" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,23 +311,23 @@
       <workItem from="1556804846891" duration="7390000" />
       <workItem from="1557760942330" duration="327000" />
       <workItem from="1558957749504" duration="598000" />
-      <workItem from="1558958405817" duration="9165000" />
+      <workItem from="1558958405817" duration="9312000" />
+      <workItem from="1559049633996" duration="6439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70808000" />
+    <option name="totallyTimeSpent" value="77394000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="617" y="0" width="1310" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="666" y="0" width="1261" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2352" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19567028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.27899343" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.17396061" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -351,9 +389,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db.sqlite3">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/cleverweb/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -486,9 +521,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file_explorer/static/css/svg/cell.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/file_explorer/static/css/svg/cell.svg" />
     <entry file="file://$PROJECT_DIR$/aruco/templates/aruco/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -528,46 +561,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cleverweb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
+        <state relative-caret-position="623">
           <caret line="122" selection-start-line="122" selection-end-line="122" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file_explorer/views.py">
+    <entry file="file://$PROJECT_DIR$/file_explorer/static/images/folder.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_explorer/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="29">
+          <caret line="5" column="1314" selection-start-line="5" selection-start-column="1314" selection-end-line="5" selection-end-column="1314" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file_explorer/templates/explorer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/file_explorer/static/images/hz.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_explorer/static/images/up.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_explorer/static/images/image.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/aruco/static/js/fmain.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aruco/static/css/fmain.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        <state relative-caret-position="374">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_explorer/templates/imageViewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file_explorer/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="68">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aruco/static/css/fmain.css">
+    <entry file="file://$PROJECT_DIR$/file_explorer/templates/explorer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="306">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_explorer/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="58" column="71" lean-forward="true" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#953#1634#0" />
+            <element signature="e#863#1054#0" />
+            <element signature="e#1081#1268#0" />
+          </folding>
         </state>
       </provider>
     </entry>

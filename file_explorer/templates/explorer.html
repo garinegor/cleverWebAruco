@@ -12,14 +12,21 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a href=".." class="navbar-brand">Clever Web</a>
+    <div style="color: white">{{ path }}</div>
 </nav>
 <div class="wrapper">
-    <nav id="sidebar" class="sidebar">
-
-    </nav>
-
     <div id="content" class="content">
-
+        {% for item in files %}
+            {% if item.type == "up" %}
+                <a style="text-decoration: none" href="../files/?path={{ home_path }}">
+                    <div class="file_elem"><img class="file_img" alt="" src="/static/images/up.svg"/><span>{{ item.name }}</span></div>
+                </a>
+            {% else %}
+                <a style="text-decoration: none" href="../files/?path={{ path }}\{{ item.name }}">
+                    <div class="file_elem"><img class="file_img" alt="" src="/static/images/{{ item.type }}.svg"/><span>{{ item.name }}</span></div>
+                </a>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
 </body>
