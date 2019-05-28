@@ -22,6 +22,8 @@ def home(request):
         return return_folder(request)
     elif get_type(path) == "image":
         return return_image(request)
+    else:
+        return return_readable(request)
 
 
 def return_folder(request):
@@ -56,9 +58,21 @@ def return_folder(request):
 def return_image(request):
     data = dict()
     path = request.GET.get('path')
+    data["path"] = path
     data["image_path"] = "file://" + (home_path + path).replace('\\', "/")
     print(data["image_path"])
     return render(request, "imageViewer.html", data)
+
+
+def return_readable(request):
+    data = dict()
+    path = request.GET.get('path')
+    data["path"] = path
+    data["content"] = ""
+    data["home_path"] = path[:len(path) - len(path.split("\\")[len(path.split("\\")) - 1]) - 1]
+    with open(home_path + path) as f:
+        data["content"] = f.readlines()
+    return render(request, "fileViewer.html", data)
 
 
 def normal(path):

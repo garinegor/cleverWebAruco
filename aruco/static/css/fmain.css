@@ -18,9 +18,27 @@ span {
     flex-wrap: wrap;
 }
 
+.readable {
+    background-color: #f4f4f4;
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    flex-direction: column;
+}
+
 .wrapper {
     background-color: #3b3b3b;
     width: 100%;
+}
+
+.wraper {
+    background-color: #3b3b3b;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: calc(100% - 56px);
 }
 
 .file_img {
@@ -51,4 +69,14 @@ span {
 
 .file_elem:hover {
     background-color: #747474;
+}
+
+.file_reader_menu {
+    background-color: #474747;
+    width: 300px;
+    padding: 30px;
+}
+
+.string {
+    margin: 1px;
 }
