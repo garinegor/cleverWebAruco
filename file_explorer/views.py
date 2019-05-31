@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from os import listdir
+from django.http import JsonResponse
+
 
 home_path = "C:\\Users\\Motoy\\Desktop"
 
@@ -70,6 +72,7 @@ def return_readable(request):
     data = dict()
     path = request.GET.get('path')
     data["path"] = path
+    data["path"].replace("\\", "\\\\")
     data["content"] = ""
     data["home_path"] = path[:len(path) - len(path.split("\\")[len(path.split("\\")) - 1]) - 1]
     with open(home_path + path) as f:
@@ -101,6 +104,7 @@ def get_type(file):
 
 def save_file(request):
     path = request.GET.get("path")
-    with open(home_path + path, 'w') as f:
-        f.write(request.GET.get("content"))
-    return "kek"
+    print(home_path + '\\' + path)
+    with open(home_path + '\\' + path, 'w') as f:
+        f.write(str(request.GET.get("content")))
+    return JsonResponse(dict())
