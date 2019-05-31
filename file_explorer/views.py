@@ -71,8 +71,10 @@ def return_image(request):
 def return_readable(request):
     data = dict()
     path = request.GET.get('path')
-    data["path"] = path
-    data["path"].replace("\\", "\\\\")
+    splited = path.split('\\')
+    data["path"] = ""
+    for i in splited[1:]:
+        data["path"] += '/' + i
     data["content"] = ""
     data["home_path"] = path[:len(path) - len(path.split("\\")[len(path.split("\\")) - 1]) - 1]
     with open(home_path + path) as f:
