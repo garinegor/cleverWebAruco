@@ -106,7 +106,7 @@ def get_type(file):
 
 def save_file(request):
     path = request.GET.get("path")
-    print(home_path + '\\' + path)
+    content = str(request.GET.get("content"))
     with open(home_path + '\\' + path, 'w') as f:
-        f.write(str(request.GET.get("content")))
+        f.write(content)
     return JsonResponse(dict())
