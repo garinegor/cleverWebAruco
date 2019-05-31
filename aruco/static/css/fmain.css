@@ -88,3 +88,7 @@ span {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.veryw {
+    width: 100%;
+}

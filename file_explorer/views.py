@@ -73,7 +73,7 @@ def return_readable(request):
     path = request.GET.get('path')
     splited = path.split('\\')
     data["path"] = ""
-    for i in splited[1:]:
+    for i in splited[1: ]:
         data["path"] += '/' + i
     data["content"] = ""
     data["home_path"] = path[:len(path) - len(path.split("\\")[len(path.split("\\")) - 1]) - 1]
