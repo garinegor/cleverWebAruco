@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/fmain.css" %}">
+    <title>File Explorer</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a href=".." class="navbar-brand">Clever Web</a>
+    <div style="color: white">{{ path }}</div>
+</nav>
+<div class="wraper">
+    <div class="vertical-center">
+        <div class="card" style="width: 18rem; margin: 0 auto; height: fit-content;">
+            <img class="card-img-top" src="/static/images/error.jpg" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Error</h5>
+                <p class="card-text">File does not seems to be readable. Sowwy :(<br/>But you still can download it</p>
+                <div class="btn-group" style="justify-content: space-between; width: 100%;">
+                    <button style="width: 100%;" type="button" class="btn btn-success">Download</button>
+                    <a href="../files/?path={{ home_path }}">
+                        <button type="button" class="btn btn-secondary">Back</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{% static "js/fmain.js" %}"></script>
+</body>
+</html>

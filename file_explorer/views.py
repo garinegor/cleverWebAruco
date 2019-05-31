@@ -18,12 +18,15 @@ def home(request):
     data = dict()
     path = request.GET.get('path')
 
-    if path == None or path.find(".") == -1:
-        return return_folder(request)
-    elif get_type(path) == "image":
-        return return_image(request)
-    else:
-        return return_readable(request)
+    try:
+        if path == None or path.find(".") == -1:
+            return return_folder(request)
+        elif get_type(path) == "image":
+            return return_image(request)
+        else:
+            return return_readable(request)
+    except:
+        return render(request, "error.html", dict())
 
 
 def return_folder(request):
@@ -43,7 +46,6 @@ def return_folder(request):
             "type": "up"
         })
         data["home_path"] = path[:len(path) - len(path.split("\\")[len(path.split("\\")) - 1]) - 1]
-        print(home_path)
 
     for i in range(0, len(file_names)):
         files.append({
@@ -71,7 +73,7 @@ def return_readable(request):
     data["content"] = ""
     data["home_path"] = path[:len(path) - len(path.split("\\")[len(path.split("\\")) - 1]) - 1]
     with open(home_path + path) as f:
-        data["content"] = f.readlines()
+        data["content"] = f.read()
     return render(request, "fileViewer.html", data)
 
 

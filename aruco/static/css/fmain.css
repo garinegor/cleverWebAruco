@@ -19,12 +19,9 @@ span {
 }
 
 .readable {
+    height: 100%;
     background-color: #f4f4f4;
     padding: 10px;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: scroll;
-    flex-direction: column;
 }
 
 .wrapper {
@@ -77,6 +74,17 @@ span {
     padding: 30px;
 }
 
-.string {
-    margin: 1px;
+.area {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.vertical-center {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }

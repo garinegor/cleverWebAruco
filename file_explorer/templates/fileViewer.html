@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     {% load static %}
     {% load staticfiles %}
-    <script>var data = {{ content|safe }};</script>
     <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "css/fmain.css" %}">
     <title>File Explorer</title>
@@ -16,11 +15,16 @@
 </nav>
 <div class="wraper">
     <div id="content" class="readable content">
-
+        <textarea class="area" id="area">{{ content }}</textarea>
     </div>
     <div class="file_reader_menu">
-        <button type="button" class="btn btn-primary">Save</button>
-        <a href="../files/?path={{ home_path }}"    ><button type="button" class="btn btn-secondary">Back</button></a>
+        <div class="btn-group-vertical">
+            <button type="button" class="btn btn-primary">Save</button>
+            <a href="../files/?path={{ home_path }}">
+                <button type="button" class="btn btn-secondary">Back</button>
+            </a>
+            <button type="button" class="btn btn-success">Download</button>
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="{% static "js/fmain.js" %}"></script>
