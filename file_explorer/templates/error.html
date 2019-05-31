@@ -21,9 +21,11 @@
                 <h5 class="card-title">Error</h5>
                 <p class="card-text">File does not seems to be readable. Sowwy :(<br/>But you still can download it</p>
                 <div class="btn-group" style="justify-content: space-between; width: 100%;">
-                    <button style="width: 100%;" type="button" class="btn btn-success">Download</button>
-                    <a href="../files/?path={{ home_path }}">
-                        <button type="button" class="btn btn-secondary">Back</button>
+                    <a href="{{ url }}" style="width: 60%;">
+                        <button style="width: 100%;" type="button" class="btn btn-success">Download</button>
+                    </a>
+                    <a href="../files/?path={{ home_path }}" style="width: 40%;">
+                        <button style="width: 100%;"  type="button" class="btn btn-secondary">Back</button>
                     </a>
                 </div>
             </div>

@@ -26,7 +26,8 @@ def home(request):
         else:
             return return_readable(request)
     except:
-        return render(request, "error.html", dict())
+        data["url"] = home_path + path
+        return render(request, "error.html", data)
 
 
 def return_folder(request):
@@ -62,7 +63,6 @@ def return_image(request):
     path = request.GET.get('path')
     data["path"] = path
     data["image_path"] = "file://" + (home_path + path).replace('\\', "/")
-    print(data["image_path"])
     return render(request, "imageViewer.html", data)
 
 
@@ -97,3 +97,10 @@ def get_type(file):
             return icons[file.split(".")[len(file.split(".")) - 1].lower()]
         except:
             return "hz"
+
+
+def save_file(request):
+    path = request.GET.get("path")
+    with open(home_path + path, 'w') as f:
+        f.write(request.GET.get("content"))
+    return "kek"
